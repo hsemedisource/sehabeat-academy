@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Flame, Activity, TrendingUp, Droplets } from "lucide-react";
+import { Flame, Droplets } from "lucide-react";
 
 // ─── Components ────────────────────────────────────────────────────────
 function Card({ title, icon: Icon, children }) {
