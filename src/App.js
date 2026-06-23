@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Plus } from "lucide-react";
 
 // ─── 1. Constants ─────────────────────────────────────────────────────────────
 const INIT_PROFILE = { name: "Sulaiman Ahmed", bmi: 24.5 };
@@ -17,19 +16,19 @@ function Card({ title, children }) {
   );
 }
 
-function ModuleProfile({ profile, setProfile }) {
+function ModuleProfile({ profile }) {
   return <Card title="Profile">Name: {profile.name}</Card>;
 }
 
-function ModuleFoodDiary({ profile, meals, setMeals }) {
+function ModuleFoodDiary() {
   return <Card title="Food Diary">Meal data placeholder</Card>;
 }
 
-function ModuleExercise({ profile, exercises, setExercises }) {
+function ModuleExercise() {
   return <Card title="Exercise">Exercise data placeholder</Card>;
 }
 
-function ModuleWater({ water, setWater }) {
+function ModuleWater({ water }) {
   return <Card title="Water Intake">{water} mL</Card>;
 }
 
@@ -48,8 +47,8 @@ export default function HealthDashboard() {
         </header>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <ModuleProfile profile={profile} />
-          <ModuleFoodDiary profile={profile} meals={meals} />
-          <ModuleExercise profile={profile} exercises={exercises} />
+          <ModuleFoodDiary meals={meals} />
+          <ModuleExercise exercises={exercises} />
           <ModuleWater water={water} />
         </div>
       </div>
