@@ -1,27 +1,11 @@
-className="text-sm border border-slate-200 rounded-lg px-2 py-1.5 outline-none"
-              >
-                <option value="ml">mL</option>
-                <option value="glass">Glasses</option>
-              </select>
-              <input
-                type="number"
-                value={addAmount}
-                onChange={e => setAddAmount(parseInt(e.target.value) || 0)}
-                className="w-20 text-sm border border-slate-200 rounded-lg px-3 py-1.5 outline-none focus:border-teal-400"
-              />
-              <button
-                onClick={addLog}
-                className="flex items-center gap-1.5 bg-sky-500 text-white text-sm px-4 py-1.5 rounded-lg font-medium hover:bg-sky-600 transition-colors"
-              >
-                <Plus size={16}/> Add
-              </button>
-            </div>
-          </div>
-        </div>
-      </Card>
-    </div>
-  );
-}
+import { useState } from "react";
+import {
+  User, Activity, Utensils, Droplets, Flame, Zap,
+  Plus, Trash2, Pencil, Check, X, ChevronDown, ChevronUp, Target
+} from "lucide-react";
+
+// (Keep all your existing constant definitions here: C, INIT_PROFILE, MEAL_NAMES, etc.)
+// ... (Ensure these are exactly as they were in the previous block)
 
 // ─── Main Application Container ────────────────────────────────────────────────
 export default function HealthDashboard() {
@@ -37,8 +21,7 @@ export default function HealthDashboard() {
         <header className="mb-8">
           <h1 className="text-2xl font-bold text-slate-800">Metabolic Health Dashboard</h1>
           <p className="text-slate-500">
-            Patient: <span className="font-semibold text-teal-600">{profile.name}</span> | 
-            Monitoring metabolic markers and lifestyle interventions.
+            Patient: <span className="font-semibold text-teal-600">{profile.name}</span>
           </p>
         </header>
 
